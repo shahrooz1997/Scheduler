@@ -94,6 +94,9 @@ int Task::set_status(int a){
         ifstream in("tasks.txt", ios::in);
         if(in.is_open()){
             while(getline(in, line)){
+                if(line == ""){
+                    continue;
+                }
                 stringstream ll(line);
                 ll >> id;
                 if(id == this->id){
@@ -145,6 +148,9 @@ int Task::set_status(int a){
         ifstream in("running_tasks.txt", ios::in);
         if(in.is_open()){
             while(getline(in, line)){
+                if(line == ""){
+                    continue;
+                }
                 stringstream ll(line);
                 ll >> id;
                 if(id == this->id){

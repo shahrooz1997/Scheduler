@@ -69,15 +69,15 @@ void Server::set_status(int a){
     ifstream in("servers.txt", ios::in);
     if(in.is_open()){
         while(getline(in, line)){
+            if(line == ""){
+                continue;
+            }
             stringstream ll(line);
             ll >> id;
-            cout << "line now is: " << line << endl;
             if(id == this->id){
                 line = this->get_server_line();
             }
-            cout << "line after id check is: " << line << endl;
             line += "\n";
-            cout << "\\n is added to the end of the line" << endl;
             lines.push_back(line);
         }
         in.close();
