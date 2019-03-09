@@ -1,0 +1,2 @@
+-C /home/mohammad/zsim/spec-cpu2006-x86_64/benchspec/CPU2006/429.mcf/run/run_base_ref_i386-m32-gcc42-nn.0015
+-o inp.out -e inp.err ../run_base_ref_i386-m32-gcc42-nn.0015/mcf_base.i386-m32-gcc42-nn inp.in

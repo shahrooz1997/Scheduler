@@ -1,0 +1,2 @@
+-C /home/mohammad/zsim/spec-cpu2006-x86_64/benchspec/CPU2006/410.bwaves/run/run_base_ref_i386-m32-gcc42-nn.0001
+-e bwaves.err ../run_base_ref_i386-m32-gcc42-nn.0001/bwaves_base.i386-m32-gcc42-nn

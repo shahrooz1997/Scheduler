@@ -1,0 +1,2 @@
+-C /home/mohammad/zsim/spec-cpu2006-x86_64/benchspec/CPU2006/433.milc/run/run_base_ref_i386-m32-gcc42-nn.0023
+-i su3imp.in -o su3imp.out -e su3imp.err ../run_base_ref_i386-m32-gcc42-nn.0023/milc_base.i386-m32-gcc42-nn

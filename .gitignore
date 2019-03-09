@@ -1,0 +1,14 @@
+# exclude everything except directory foo/bar
+/build
+/dist
+/NoCache
+/Ideal
+/Alloy
+/HMA
+/Banshee
+/UnisonCache
+/MemCacheAlloy
+/MemCacheBanshee
+/MemCacheUnison
+/FullMem
+/install.sh
