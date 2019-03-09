@@ -111,14 +111,24 @@ int Task::set_status(int a){
             }
 
             ofstream out("tasks.txt", ios::out);
-            for(int i = 0; i < lines.size(); i++){
-                out << lines[i];
+            if(out.is_open()){
+                for(int i = 0; i < lines.size(); i++){
+                    out << lines[i];
+                }
+                out.close();
             }
-            out.close();
+            else{
+                cerr << "We couldn't change the file tasks.txt because we couldn't open it to write." << endl;
+            }
             
             ofstream out2("running_tasks.txt", ios::app);
-            out2 << this->get_task_line() << endl;
-            out2.close();
+            if(out2.is_open()){
+                out2 << this->get_task_line() << endl;
+                out2.close();
+            }
+            else{
+                cerr << "We couldn't change the file running_tasks.txt because we couldn't open it to append." << endl;
+            }
         }
         else{
             cerr << "We couldn't change the file tasks.txt because we couldn't open it" << endl;
@@ -152,14 +162,24 @@ int Task::set_status(int a){
             }
 
             ofstream out("running_tasks.txt", ios::out);
-            for(int i = 0; i < lines.size(); i++){
-                out << lines[i];
+            if(out.is_open()){
+                for(int i = 0; i < lines.size(); i++){
+                    out << lines[i];
+                }
+                out.close();
             }
-            out.close();
+            else{
+                cerr << "We couldn't change the file running_tasks.txt because we couldn't open it to write." << endl;
+            }
             
             ofstream out2("done_tasks.txt", ios::app);
-            out2 << this->get_task_line() << endl;
-            out2.close();
+            if(out2.is_open()){
+                out2 << this->get_task_line() << endl;
+                out2.close();
+            }
+            else{
+                cerr << "We couldn't change the file done_tasks.txt because we couldn't open it to append." << endl;
+            }
         }
         else{
             cerr << "We couldn't change the file tasks.txt because we couldn't open it" << endl;

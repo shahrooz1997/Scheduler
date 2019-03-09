@@ -71,21 +71,28 @@ void Server::set_status(int a){
         while(getline(in, line)){
             stringstream ll(line);
             ll >> id;
+            cout << "line now is: " << line << endl;
             if(id == this->id){
                 line = this->get_server_line();
             }
+            cout << "line after id check is: " << line << endl;
             line += "\n";
+            cout << "\\n is added to the end of the line" << endl;
             lines.push_back(line);
         }
         in.close();
         
         ofstream out("servers.txt", ios::out);
-        
-        for(int i = 0; i < lines.size(); i++){
-            out << lines[i];
+        if(out.is_open()){
+            for(int i = 0; i < lines.size(); i++){
+                out << lines[i];
+            }
+            out.close();
+        }
+        else{
+            cerr << "We couldn't change the file server.txt because we couldn't open it to write." << endl;
         }
         
-        out.close();
     }
     else{
         cerr << "We couldn't change the file server.txt because we couldn't open it" << endl;
