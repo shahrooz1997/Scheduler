@@ -60,6 +60,9 @@ build: .build-post
 # Add your post 'build' code here...
 
 
+clean-dist:
+	rm -rf ./dist
+
 # clean
 clean: .clean-post
 

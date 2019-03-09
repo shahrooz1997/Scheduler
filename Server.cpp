@@ -72,7 +72,7 @@ void Server::set_status(int a){
             stringstream ll(line);
             ll >> id;
             if(id == this->id){
-                line = t his->get_server_line();
+                line = this->get_server_line();
             }
             line += "\n";
             lines.push_back(line);
