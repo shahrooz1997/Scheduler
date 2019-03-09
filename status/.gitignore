@@ -1,4 +1,4 @@
-!/idle/.
-/idle/*
-/running/*
-!/running/.
+!idle/.
+idle/*
+running/*
+!running/.
