@@ -69,6 +69,7 @@ os.system("ssh -t zard mkdir /Disk3TB/shahrooz/RES/Res_" + cache_type + "_" + ca
 os.system("scp ./" + benchmark + "/zsim.h5 zard:/Disk3TB/shahrooz/RES/Res_" + cache_type + "_" + cache_type_name_extension + "/" + benchmark)
 os.system("scp ./" + benchmark + "/zsim_stdout.txt zard:/Disk3TB/shahrooz/RES/Res_" + cache_type + "_" + cache_type_name_extension + "/" + benchmark)
 os.system("scp ./" + benchmark + "/zsim_stderr.txt zard:/Disk3TB/shahrooz/RES/Res_" + cache_type + "_" + cache_type_name_extension + "/" + benchmark)
+os.system("scp ./" + benchmark + "/out.cfg zard:/Disk3TB/shahrooz/RES/Res_" + cache_type + "_" + cache_type_name_extension + "/" + benchmark)
 os.system("ssh -t zard mv /Disk3TB/shahrooz/status/running/" + server_name + " /Disk3TB/shahrooz/status/idle/")
 
 info("finished")
